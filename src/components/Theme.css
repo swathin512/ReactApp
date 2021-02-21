@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    background-color: white;
+  }
+  
+  .red {
+    background-color:red;
+    margin: 30px;
+    padding: 200px;
+    font-size: 30px;
+  }
+
+  .green {
+    background-color:green;
+    margin: 30px;
+    padding: 200px;
+    font-size: 30px;
+  }
+  
+  #b2{
+
+    position: relative;
+  }
+
+  #c1{
+      margin-left: 0px;
+  }
