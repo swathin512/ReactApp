@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './Theme.css';
 
 const green = '#39D1B4';
 const yellow = '#FFD712';
