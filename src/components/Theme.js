@@ -1,33 +1,33 @@
-import React ,{useState} from "react";
-import './Theme.css';
-import Disp from "./Disp.js";
-import Disp1 from "./Disp1.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
+const green = '#39D1B4';
+const yellow = '#FFD712';
+const red = '#F44E3B';
 
-function Theme() {
-const [theme, setTheme] =useState('green')
-
-
-
-
-
-    return (
-<header className={`${theme}`}>
-  <title>Document</title>
- 
-  <div className={`${theme}`}>
-    <div className="flex-container">
-    <div id="c1">
+export default class Toggle extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = { color: green };
+    this.changeColor = this.changeColor.bind(this);
+    this.changeColor1 = this.changeColor1.bind(this);
+  }
+  changeColor(){
+    const newColor = this.state.color == green ? red : green;
+    this.setState({ color: newColor })
+  }
+   changeColor1(){
+    const newColor1 = this.state.color == green ? yellow : green;
+    this.setState({ color: newColor1 })
+  }
+  render(){
+    return(
+      <div style={{background: this.state.color}}>
+      <h1>Change color</h1>
+      <button onClick={this.changeColor}>ClickToChange</button>
+      <button onClick={this.changeColor1}>ClickToChange</button>
       </div>
-    </div>
-  </div>
-  <div className="relative">
-    <button type="submit" className="navitem" id="b1" onClick={()=>setTheme('red')}>Red theme</button>
-    
-    
-  </div>
-</header>
-    );
+    )
+  }
 }
-
-export default Theme;
+ReactDOM.render(<Toggle />, document.getElementById('root'))
