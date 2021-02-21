@@ -5,19 +5,32 @@
   
   .red {
     background-color:red;
-    margin: 30px;
-    padding: 200px;
+    margin: 30px 20px;
+    padding: 50px;
     font-size: 30px;
+    
   }
 
   .green {
     background-color:green;
     margin: 30px;
+    padding: 50px;
+    font-size: 30px;
+    
+  }
+  .yellow {
+    background-color:yellow;
+    margin: 30px;
     padding: 200px;
     font-size: 30px;
   }
-  
-  #b2{
+  .blue {
+    background-color:blue;
+    margin: 30px;
+    padding: 200px;
+    font-size: 30px;
+  }
+  #b1{
 
     position: relative;
   }
